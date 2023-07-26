@@ -1,0 +1,31 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subtitle Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+      <button id="fullscreenButton" style="position: fixed; top: 10px; right: 10px">Fullscreen</button>
+      <div style="display: flex; justify-content: center; margin-top: 20vh;">
+        <input type="file" id="subtitleFile" accept=".srt">
+      </div>
+        <div class="subtitle-container">
+            <div id="subtitleText"></div>
+        </div>
+        <div style="display: flex; align-items: center; position: fixed; bottom: 10px; left: 10px; width: 98%">
+          <button id="playButton" class="play-button">&nbsp;</button>
+          <button id="seekButtonAdd" style="margin-left: 10px;">+10</button>
+          <button id="seekButtonSubtract" style="margin-left: 10px;">-10</button>
+          <input style="width: 100%" type="range" id="seekBar" min="0" step="0.01"></input>
+          <div id="currentTime">00:00</div>
+        </div>
+    </div>
+    <script src="NoSleep.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
