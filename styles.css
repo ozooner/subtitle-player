@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: black;
+  font-family: Arial, sans-serif;
+  background-color: black;
 }
 
 #currentTime{
@@ -180,3 +180,8 @@ button:hover{
   color: white; /* Set the text color to white */
 }
 
+@media screen and (max-width: 600px) {
+  .custom-dialog {
+    width: 300px;
+  }
+}
