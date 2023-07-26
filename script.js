@@ -154,14 +154,10 @@ function seek() {
   currentTimeDisplay.textContent = formatTime(currentTime);
 }
 
-const requestWakeLock = async () => {
-  try {
-    const wakeLock = await navigator.wakeLock.request("screen");
-    console.log("GOT WAKE LOCK?", wakeLock)
-  } catch (err) {
-    // The wake lock request fails - usually system-related, such as low battery.
+function closeDialog() {
+  const dialog = document.getElementById('myDialog');
+  dialog.close();
+}
 
-    console.log(`${err.name}, ${err.message}`);
-  }
-};
-requestWakeLock()
+const dialog = document.getElementById('myDialog');
+dialog.showModal();

@@ -171,3 +171,12 @@ button:hover{
   justify-content: center;
 }
 
+
+.custom-dialog {
+  width: 500px;
+  padding: 20px;
+  background-color: #3a3a3c; /* Set the background color to #3a3a3c */
+  border-radius: 10px; /* Make the corners rounded */
+  color: white; /* Set the text color to white */
+}
+
