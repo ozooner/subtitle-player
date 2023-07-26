@@ -159,5 +159,20 @@ function closeDialog() {
   dialog.close();
 }
 
-const dialog = document.getElementById('myDialog');
-dialog.showModal();
+function checkAndShowDialog() {
+  const dialogShownBefore = localStorage.getItem('dialogShown');
+  if (!dialogShownBefore) {
+    const dialog = document.getElementById('myDialog');
+    dialog.showModal();
+    localStorage.setItem('dialogShown', 'true');
+  }
+}
+
+// Function to close the dialog
+function closeDialog() {
+  const dialog = document.getElementById('myDialog');
+  dialog.close();
+}
+
+// Show the dialog on initial load if not shown before
+window.onload = checkAndShowDialog;
