@@ -14,8 +14,9 @@ body {
   text-align: center;
   font-size: 60px;
   color: white;
-  height: 70vh;
-  margin-top: 20vh;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 input[type=range] {

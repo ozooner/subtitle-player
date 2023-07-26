@@ -18,11 +18,9 @@ playButton.addEventListener('click', play);
 seekBar.addEventListener('input', seek);
 fullscreenButton.addEventListener('click', toggleFullscreen);
 seekButtonAdd.addEventListener('click', () => {
-  console.log("CLICKKK!")
   currentTime += 10000;
 })
 seekButtonSubtract.addEventListener('click', () => {
-  console.log("CLICKKK!")
   currentTime -= 10000;
 });
 
@@ -94,7 +92,7 @@ function parseSubtitle(data) {
   }
 
   seekBar.max = subtitles[subtitles.length - 1].endTime;
-  subtitleFileInput.style.display = 'none';
+  document.getElementById('filePicker').style.display = 'none';
   currentTime = subtitles[0].startTime;
   updateTime();
 }
